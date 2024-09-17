@@ -1,0 +1,6 @@
+@csharp.netcore.webapi.hexagonal_crud_efcore_sqlserver_HostAddress = http://localhost:5143
+
+GET {{csharp.netcore.webapi.hexagonal_crud_efcore_sqlserver_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
