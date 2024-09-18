@@ -1,6 +1,6 @@
 Cadastro de Produtos - Arquitetura Hexagonal
 
-Bem-vindo ao projeto MyHexagonalApp! Este é um exemplo de uma aplicação web utilizando ASP.NET Core com uma arquitetura hexagonal e SQLite.
+Este é um exemplo de uma aplicação web utilizando ASP.NET Core com uma arquitetura hexagonal e SQLite.
 
 🚀 Como Executar o Projeto
 1. Clonar o Repositório
