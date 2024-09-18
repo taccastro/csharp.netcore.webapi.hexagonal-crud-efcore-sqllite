@@ -34,9 +34,19 @@
 
         public async Task UpdateAsync(Product product)
         {
-            _context.Products.Update(product);
+            var existingProduct = await _context.Products.FindAsync(product.Id);
+            if (existingProduct == null)
+            {
+                throw new KeyNotFoundException("Product not found");
+            }
+
+            // Atualize os campos
+            existingProduct.Name = product.Name;
+            existingProduct.Price = product.Price;
+
             await _context.SaveChangesAsync();
         }
+
 
         public async Task DeleteAsync(int id)
         {

@@ -1,8 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Application.Services;
+﻿using Application.Services;
 using Domain.Entities;
-using System.Collections.Generic;
-using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
 
 [ApiController]
 [Route("api/[controller]")]
@@ -24,7 +22,6 @@ public class ProductsController : ControllerBase
     }
 
     // GET: api/products/5
-    [HttpGet("{id}")]
     [HttpGet("{id}")]
     public async Task<ActionResult<Product>> Get(int id)
     {
@@ -54,22 +51,22 @@ public class ProductsController : ControllerBase
 
     // PUT: api/products/5
     [HttpPut("{id}")]
-    public async Task<IActionResult> Put(int id, [FromBody] Product product)
+    public async Task<IActionResult> Put(int id, Product product)
     {
         if (id != product.Id)
         {
             return BadRequest("Product ID mismatch.");
         }
 
-        var existingProduct = await _productService.GetProductByIdAsync(id);
-        if (existingProduct == null)
+        try
+        {
+            await _productService.UpdateProductAsync(product);
+            return NoContent();
+        }
+        catch (KeyNotFoundException)
         {
             return NotFound();
         }
-
-        await _productService.UpdateProductAsync(product);
-
-        return NoContent();
     }
 
     // DELETE: api/products/5

@@ -3,13 +3,23 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35303.130
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "csharp.netcore.webapi.hexagonal-crud-efcore-sqlserver", "csharp.netcore.webapi.hexagonal-crud-efcore-sqlserver\csharp.netcore.webapi.hexagonal-crud-efcore-sqlserver.csproj", "{28ACF6E7-6590-41D2-B657-B862666FE8AB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Api", "csharp.netcore.webapi.hexagonal-crud-efcore-sqlserver\Api.csproj", "{28ACF6E7-6590-41D2-B657-B862666FE8AB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{531E74D5-FEA0-4D86-B5F5-C3B40AD2AF92}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "Domain\Domain.csproj", "{531E74D5-FEA0-4D86-B5F5-C3B40AD2AF92}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application", "Application\Application.csproj", "{5FAC0874-70F2-4978-A8CD-CCAE9F1ADC1E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Application", "Application\Application.csproj", "{5FAC0874-70F2-4978-A8CD-CCAE9F1ADC1E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure", "Infrastructure\Infrastructure.csproj", "{D503C59A-9436-405C-A794-6EFEB7339B8F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infrastructure", "Infrastructure\Infrastructure.csproj", "{D503C59A-9436-405C-A794-6EFEB7339B8F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{7D51D7B2-6B4D-4E33-BEA7-02895E71ADBD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{E8E19EC2-576D-4F65-9351-451A49A45C7C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{EFB823F0-82C3-4854-94CE-FFBC77F046B6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{3E2AB909-F9D9-4386-8979-72A849054815}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Api", "Api", "{EE461748-B143-45F4-9AF4-423BBDDFBD5F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -36,6 +46,16 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{28ACF6E7-6590-41D2-B657-B862666FE8AB} = {EE461748-B143-45F4-9AF4-423BBDDFBD5F}
+		{531E74D5-FEA0-4D86-B5F5-C3B40AD2AF92} = {E8E19EC2-576D-4F65-9351-451A49A45C7C}
+		{5FAC0874-70F2-4978-A8CD-CCAE9F1ADC1E} = {EFB823F0-82C3-4854-94CE-FFBC77F046B6}
+		{D503C59A-9436-405C-A794-6EFEB7339B8F} = {3E2AB909-F9D9-4386-8979-72A849054815}
+		{E8E19EC2-576D-4F65-9351-451A49A45C7C} = {7D51D7B2-6B4D-4E33-BEA7-02895E71ADBD}
+		{EFB823F0-82C3-4854-94CE-FFBC77F046B6} = {7D51D7B2-6B4D-4E33-BEA7-02895E71ADBD}
+		{3E2AB909-F9D9-4386-8979-72A849054815} = {7D51D7B2-6B4D-4E33-BEA7-02895E71ADBD}
+		{EE461748-B143-45F4-9AF4-423BBDDFBD5F} = {7D51D7B2-6B4D-4E33-BEA7-02895E71ADBD}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {438A5B5D-9834-410D-8FFF-BCBF39B48B3A}
